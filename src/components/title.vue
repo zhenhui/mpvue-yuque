@@ -1,18 +1,19 @@
 <template>
-  <div>
-    <navigator :url="url" class="list-nor">{{jumptext}}
-      <div class="jp"></div>
-    </navigator>
+  <div style="padding-top:20px">
+    <div class="list-nor">
+      <div>
+        <h2>
+          <div class="title-warp"></div>
+          {{titleText}}
+        </h2>
+      </div>
+    </div>
   </div>
 </template>
 <script>
   export default {
     props: {
-      url: {
-        type: String,
-        default: 'url'
-      },
-      jumptext: {
+      titleText: {
         type: String,
         default: '标题'
       }
@@ -24,11 +25,23 @@
   .list-nor {
     position: relative;
     display: block;
+    border-top: 1px solid #eee;
     border-bottom: 1px solid #eee;
     padding-left: 15px;
     height: 44px;
+    font-weight: 800;
     line-height: 44px;
     background-color: white;
+  }
+  .title-warp {
+    display:inline-block;
+    width:10rpx;
+    height:36rpx;
+    border-radius:10rpx;
+    background-color:#1394F6;
+    vertical-align:sub;
+    margin-right:10rpx;
+    /* margin-bottom:5rpx;margin-bottom:5rpx; */
   }
   .jp {
     content: " ";
